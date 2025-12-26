@@ -74,32 +74,6 @@ export default function Home() {
           <h2>Featured Projects</h2>
           <div className="projects-grid">
 
-            {/* Log Home People */}
-            <div className="project-card pixel-border">
-              <div className="project-header">
-                <h3>Log Home People</h3>
-                <span className="project-tag">Live Stream</span>
-              </div>
-              <p className="project-description">
-                A weekly live stream supporting regular men and women who are building
-                their own log homes from scratch. Empowering DIY builders with knowledge,
-                community, and inspiration.
-              </p>
-              <div className="project-tech">
-                <span className="tech-tag">Community</span>
-                <span className="tech-tag">Education</span>
-                <span className="tech-tag">DIY</span>
-              </div>
-              <a
-                href="http://www.loghomepeople.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                Visit Site →
-              </a>
-            </div>
-
             {/* ZeroETV */}
             <div className="project-card pixel-border">
               <div className="project-header">

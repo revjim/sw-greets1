@@ -23,9 +23,6 @@ export default function Footer() {
         <div className="footer-section">
           <h3>Projects</h3>
           <div className="footer-links">
-            <a href="http://www.loghomepeople.com" target="_blank" rel="noopener noreferrer">
-              Log Home People
-            </a>
             <a href="http://www.zeroetv.com" target="_blank" rel="noopener noreferrer">
               ZeroETV
             </a>
