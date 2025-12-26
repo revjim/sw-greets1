@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  /* 8-bit Color Palette inspired by SW logo */
+  --pixel-red: #ff0000;
+  --pixel-red-dark: #cc0000;
+  --pixel-red-darker: #990000;
+  --pixel-white: #ffffff;
+  --pixel-black: #000000;
+  --pixel-dark-bg: #0a0a0a;
+  --pixel-gray-dark: #1a1a1a;
+  --pixel-gray: #333333;
+  --pixel-gray-light: #666666;
+  --pixel-blue: #00ffff;
+  --pixel-green: #00ff00;
+  --pixel-yellow: #ffff00;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+
+  font-family: 'Press Start 2P', system-ui, monospace;
+  line-height: 1.8;
+  font-weight: 400;
+
+  color: var(--pixel-white);
+  background-color: var(--pixel-dark-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--pixel-dark-bg);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 0, 0, 0.03) 2px,
+      rgba(255, 0, 0, 0.03) 4px
+    );
+}
+
+a {
+  color: var(--pixel-red);
+  text-decoration: none;
+  transition: all 0.1s;
+  border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  color: var(--pixel-blue);
+  border-bottom: 2px solid var(--pixel-blue);
+  text-shadow: 0 0 8px var(--pixel-blue);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+  color: var(--pixel-red);
+  text-shadow: 3px 3px 0 var(--pixel-red-darker);
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+h3 {
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+p {
+  font-size: clamp(0.6rem, 1.5vw, 0.9rem);
+  line-height: 2;
+  margin-bottom: var(--spacing-sm);
+  color: var(--pixel-white);
+}
+
+button {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--pixel-red);
+  color: var(--pixel-white);
+  border: 4px solid var(--pixel-red-darker);
+  cursor: pointer;
+  transition: all 0.1s;
+  box-shadow:
+    4px 4px 0 var(--pixel-red-darker),
+    0 0 20px rgba(255, 0, 0, 0.5);
+  position: relative;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: var(--pixel-blue);
+  border-color: #00aaaa;
+  box-shadow:
+    4px 4px 0 #00aaaa,
+    0 0 20px rgba(0, 255, 255, 0.8);
+  transform: translate(-2px, -2px);
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow:
+    2px 2px 0 var(--pixel-red-darker),
+    0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+input, textarea {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+  padding: var(--spacing-sm);
+  background-color: var(--pixel-gray-dark);
+  color: var(--pixel-white);
+  border: 3px solid var(--pixel-gray);
+  outline: none;
+  transition: all 0.2s;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--pixel-red);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Pixel grid effect */
+.pixel-border {
+  border: 4px solid var(--pixel-red);
+  box-shadow:
+    inset 0 0 0 2px var(--pixel-red-darker),
+    0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+/* Scanline effect */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(transparent, rgba(255, 0, 0, 0.3));
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Glitch text effect */
+@keyframes glitch {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+}
