@@ -13,9 +13,9 @@ export default function Home() {
           <img src="/sw-logo.png" alt="SW Logo" className="logo-large-image" />
           <h1 className="glitch-text">Steve White</h1>
           <div className="tagline">
-            <span className="tag">Software Developer</span>
+            <span className="tag">Developer</span>
             <span className="separator">|</span>
-            <span className="tag">Tech Enthusiast</span>
+            <span className="tag">Creator</span>
             <span className="separator">|</span>
             <span className="tag">Real Estate Investor</span>
           </div>
@@ -33,7 +33,7 @@ export default function Home() {
           <div className="about-content">
             <div className="about-text">
               <p>
-                Welcome to my corner of the digital universe. I'm a software developer
+                Welcome to my corner of the digital universe. I'm a developer
                 passionate about building innovative solutions that shape the future.
               </p>
               <p>
